@@ -1,8 +1,8 @@
 .page-container {
-  width: @mobile-width;
+  width: @desktop-width;
   margin: 0 auto;
-  padding-left: @padding-mobile;
-  padding-right: @padding-mobile;
+  padding-left: @padding-desktop;
+  padding-right: @padding-desktop;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
@@ -11,9 +11,9 @@
     padding-right: @padding-tablet;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @mobile-width) {
     width: @desktop-width;
-    padding-left: @padding-desktop;
-    padding-right: @padding-desktop;
+    padding-left: @padding-mobile;
+    padding-right: @padding-mobile;
   }
 }
