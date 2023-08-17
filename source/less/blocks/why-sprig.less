@@ -1,5 +1,9 @@
 .why-sprig {
   margin-bottom: 160px;
+
+  @media (max-width: 1239px) {
+    margin-bottom: 90px;
+  }
 }
 
 .why-sprig__description {
@@ -8,47 +12,145 @@
   margin-right: @margin-edge-small;
   margin-bottom: 192px;
   padding-top: 115px;
+  padding-bottom: 50px;
   padding-left: 48.5%;
-  padding-right: 10%;
+  padding-right: 144px;
   background-color: @green;
   background-image: url("../img/cyclist.svg");
-  background-size: image-size("../img/cyclist.svg");
+  background-size: auto 80%;
   background-position: left center;
   background-repeat: no-repeat;
   border-radius: 10px;
   box-sizing: border-box;
+
+  @media (max-width: 1239px) {
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: 900px) and (max-width: 1439px) {
+    padding-left: 51%;
+    padding-right: 5%;
+  }
+
+  @media (min-width: 900px) and (max-width: 1239px) {
+    min-height: 400px;
+  }
+
+  @media (min-width: 1100px) and (max-width: 1239px) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: 900px) and (max-width: 1099px) {
+    padding-top: 50px;
+    background-size: auto 65%;
+  }
+
+  @media (min-width: 400px) and (max-width: 899px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (max-width: 399px) {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: 899px) {
+    min-height: auto;
+    background-position: center 30px;
+  }
+
+  @media (min-width: 676px) and (max-width: 899px) {
+    padding-top: 320px;
+    background-size: auto 270px;
+  }
+
+  @media (min-width: 460px) and (max-width: 675px) {
+    padding-top: 250px;
+    background-size: auto 200px;
+  }
+
+  @media (max-width: 459px) {
+    padding-top: 210px;
+    background-size: auto 150px;
+  }
 }
 
 .why-sprig__description-title {
   margin: 0;
   margin-bottom: 35px;
-  font-size: 34px;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0.34px;
 }
 
 .why-sprig__description-text {
   margin: 0;
+
+  @media (min-width: 676px) and (max-width: 1239px) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  @media (max-width: 675px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .why-sprig__possibility {
   margin-bottom: 103px;
+
+  @media (max-width: 1239px) {
+    margin-bottom: 70px;
+  }
 }
 
 .why-sprig__possibility-title {
   margin: 0;
   margin-bottom: 57px;
-  padding: 0 25%;
-  font-size: 34px;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0.34px;
+  padding: 0 360px;
   text-align: center;
+
+  @media (min-width: 1240px) and (max-width: 1439px) {
+    padding-left: 22.5%;
+    padding-right: 22.5%;
+  }
+
+  @media (min-width: 900px) and (max-width: 1239px) {
+    padding-left: 19%;
+    padding-right: 19%;
+  }
+
+  @media (min-width: 810px) and (max-width: 899px) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  @media (min-width: 740px) and (max-width: 809px) {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  @media (min-width: 580px) and (max-width: 739px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (max-width: 579px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .why-sprig__possibility-image {
   text-align: center;
+}
+
+.why-sprig__possibility-image img {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
 }
 
 .why-sprig__startFree {

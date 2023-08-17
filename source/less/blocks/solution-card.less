@@ -1,11 +1,24 @@
 .solution-card {
   display: flex;
+  flex-wrap: wrap;
   align-items: start;
   padding-top: 7px;
   margin-bottom: 110px;
 
   &:last-child {
-    margin-bottom: 0;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 550px) and (max-width: 899px) {
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: 549px) {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 675px) {
+    display: block;
   }
 }
 
@@ -45,15 +58,27 @@
     background-size: 22px 15px;
     background-color: @orange;
   }
+
+  @media (min-width: 1070px) and (max-width: 1239px) {
+    padding-right: 10%;
+  }
+
+  @media (min-width: 320px) and (max-width: 1069px) {
+    padding-right: 5%;
+  }
+
+  @media (max-width: 675px) {
+    width: 100%;
+  }
 }
 
 .solution-card__description-title {
   margin: 0;
   margin-bottom: 28px;
-  font-size: 34px;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0.34px;
+
+  @media (max-width: 675px) {
+    padding-right: 60%;
+  }
 }
 
 .solution-card__description-text {
@@ -62,17 +87,63 @@
   font-size: 17px;
   line-height: 28px;
   color: @dark-add;
+
+  @media (max-width: 899px) {
+    margin-bottom: 30px;
+  }
 }
 
 .solution-card__description-link {
   color: @black;
+
+  @media (max-width: 675px) {
+    padding: 7px 10px;
+    font-size: 13px;
+  }
 }
 
 .solution-card__image {
   width: 50%;
   text-align: right;
+  order: 1;
+
+  @media (min-width: 900px) and (max-width: 1239px) {
+    padding-top: 30px;
+  }
+
+  @media (min-width: 550px) and (max-width: 675px) {
+    position: relative;
+    margin-left: auto;
+  }
+
+  @media (max-width: 549px) {
+    width: 100%;
+  }
 }
 
 .solution-card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
   object-fit: cover;
+
+  @media (max-width: 675px) {
+    position: absolute;
+    right: 0;
+    width: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: 550px) and (max-width: 675px) {
+    top: -50px;
+    max-height: 170px;
+  }
+
+  @media (max-width: 549px) {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
 }

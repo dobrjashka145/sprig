@@ -1,11 +1,28 @@
 .promo-top {
   margin-bottom: 182px;
+
+  @media (max-width: 1239px) {
+    margin-bottom: 90px;
+  }
 }
 
 .promo-top__content-container {
   display: flex;
   min-height: 886px;
   margin-bottom: 190px;
+
+  @media (min-width: 865px) and (max-width: 1239px) {
+    min-height: 596px;
+    margin-bottom: 90px;
+  }
+
+  @media (max-width: 864px) {
+    display: block;
+    min-height: auto;
+    margin-bottom: 90px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .promo-top__description {
@@ -14,6 +31,40 @@
   padding-top: 155px;
   padding-right: 150px;
   box-sizing: border-box;
+  order: -1;
+
+  @media (min-width: 1240px) and (max-width: 1439px) {
+    padding-left: 8.9%;
+    padding-right: 8.9%;
+  }
+
+  @media (min-width: 865px) and (max-width: 1239px) {
+    padding-top: 110px;
+    padding-left: 4%;
+    padding-right: 6%;
+  }
+
+  @media (max-width: 864px) {
+    width: 100%;
+  }
+
+  @media (min-width: 650px) and (max-width: 864px) {
+    padding-top: 70px;
+    padding-left: 70px;
+    padding-right: 120px;
+  }
+
+  @media (min-width: 510px) and (max-width: 649px) {
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 70px;
+  }
+
+  @media (max-width: 509px) {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .promo-top__description-title {
@@ -23,6 +74,26 @@
   font-weight: 400;
   line-height: 64px;
   letter-spacing: 0.6px;
+
+  @media (min-width: 865px) and (max-width: 1239px) {
+    font-size: 46px;
+    line-height: 54px;
+  }
+
+  @media (min-width: 676px) and (max-width: 864px) {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @media (min-width: 460px) and (max-width: 675px) {
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  @media (max-width: 459px) {
+    font-size: 34px;
+    line-height: 42px;
+  }
 }
 
 .promo-top__description-text {
@@ -31,15 +102,36 @@
   font-size: 22px;
   line-height: 32px;
   color: @dark-add;
+
+  @media (min-width: 480px) and (max-width: 1239px) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  @media (max-width: 479px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .promo-top__startFree,
 .promo-top__talkSales {
   display: inline-block;
+
+  @media (max-width: 419px) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .promo-top__startFree {
   margin-right: 10px;
+
+  @media (max-width: 419px) {
+    margin-bottom: 15px;
+    margin-right: auto;
+  }
 }
 
 .promo-top__talkSales {
@@ -49,10 +141,20 @@
 .promo-top__image {
   position: relative;
   width: 50%;
-  background-image: url("../img/promo-top-bg.svg"), linear-gradient(to right, @white 0%, @white 16.7%, @yellow 17.7%, @yellow 100%);
-  background-size: image-size("../img/promo-top-bg.svg"), 100% auto;
+  background-image: url("../img/promo-top-bg.svg"), linear-gradient(to right, @white 0%, @white 16.7%, @yellow 16.7%, @yellow 100%);
+  background-size: 83% auto, 100% auto;
   background-position: right bottom;
   background-repeat: no-repeat;
+
+  @media (min-width: 500px) and (max-width: 864px) {
+    width: 90%;
+    margin-left: auto;
+  }
+
+  @media (max-width: 499px) {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 .promo-top__image img {
@@ -60,36 +162,152 @@
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
+
+  @media (min-width: 500px) and (max-width: 1239px) {
+    width: 405px;
+    height: auto;
+  }
+
+  @media (max-width: 864px) {
+    position: static;
+    display: block;
+    width: 70%;
+    height: auto;
+    transform: none;
+  }
 }
 
 .promo-top__partners-title {
   margin: 0;
   margin-bottom: 58px;
-  padding-left: 400px;
-  padding-right: 400px;
-  font-size: 42px;
-  font-weight: 400;
-  line-height: 48px;
-  letter-spacing: 0.42px;
+  margin-left: 25%;
+  margin-right: 25%;
   text-align: center;
+
+  @media (min-width: 900px) and (max-width: 1160px) {
+    margin-left: 23%;
+    margin-right: 23%;
+  }
+
+  @media (min-width: 676px) and (max-width: 899px) {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  @media (min-width: 460px) and (max-width: 675px) {
+    margin-left: 11%;
+    margin-right: 11%;
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  @media (max-width: 459px) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 .promo-top__partners-logo {
+  .list-reset();
   display: flex;
   flex-wrap: wrap;
-  padding: 0 148px;
+  padding: 0 133px;
+
+  @media (min-width: 1340px) and (max-width: 1439px) {
+    padding-left: 15.2%;
+    padding-right: 15.2%;
+  }
+
+  @media (min-width: 1240px) and (max-width: 1339px) {
+    padding-left: 12.4%;
+    padding-right: 12.4%;
+  }
+
+  @media (min-width: 1140px) and (max-width: 1239px) {
+    padding-left: 19%;
+    padding-right: 19%;
+  }
+
+  @media (min-width: 980px) and (max-width: 1139px) {
+    padding-left: 14%;
+    padding-right: 14%;
+  }
+
+  @media (min-width: 900px) and (max-width: 979px) {
+    padding-left: 18.2%;
+    padding-right: 18.2%;
+  }
+
+  @media (min-width: 820px) and (max-width: 899px) {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  @media (min-width: 740px) and (max-width: 819px) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  @media (min-width: 660px) and (max-width: 739px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: 640px) and (max-width: 659px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: 540px) and (max-width: 639px) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  @media (min-width: 420px) and (max-width: 539px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (max-width: 419px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .promo-top__partners-image {
   margin-bottom: 7px;
-  margin-right: 32px;
+  margin-left: 15px;
+  margin-right: 15px;
   padding: 0 25px;
-
-  &:nth-child(5n) {
-    margin-right: 0;
-  }
 
   &:nth-last-child(-n+5) {
     margin-bottom: 0;
+  }
+
+  @media (min-width: 460px) and (max-width: 979px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  @media (min-width: 380px) and (max-width: 459px) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  @media (max-width: 379px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.promo-top__partners-image img {
+  @media (min-width: 460px) and (max-width: 979px) {
+    width: 120px;
+    height: auto;
+  }
+
+  @media (max-width: 459px) {
+    width: 90px;
+    height: auto;
   }
 }

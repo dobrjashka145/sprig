@@ -1,11 +1,14 @@
 .main-nav__list {
   .list-reset();
   display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
 }
 
 .main-nav__item {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .main-nav__toggle {
@@ -29,6 +32,30 @@
   &--user {
     padding-left: 19px;
     padding-right: 19px;
+  }
+
+  @media (min-width: 865px) and (max-width: 1220px) {
+    padding: 10px 30px;
+  }
+
+  @media (min-width: 540px) and (max-width: 864px) {
+    padding: 10px 20px;
+  }
+
+  @media (min-width: 509px) and (max-width: 539px) {
+    padding: 10px 15px;
+  }
+
+  @media (min-width: 340px) and (max-width: 508px) {
+    padding: 10px 20px;
+  }
+
+  @media (max-width: 379px) {
+    padding: 10px 7px;
+  }
+
+  @media (max-width: 459px) {
+    font-size: 13px;
   }
 }
 

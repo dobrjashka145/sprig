@@ -1,4 +1,5 @@
 .features {
+  margin-bottom: 150px;
   padding-top: 93px;
   padding-bottom: 97px;
   padding-left: 122px;
@@ -8,6 +9,55 @@
   background-size: image-size("../img/target.svg");
   background-position: 120px 380px;
   background-repeat: no-repeat;
+
+  @media (min-width: 1240px) and (max-width: 1439px) {
+    padding-right: 6.5%;
+  }
+
+  @media (max-width: 1239px) {
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: 900px) and (max-width: 1239px) {
+    padding-right: 70px;
+  }
+
+  @media (max-width: 899px) {
+    padding-top: 50px;
+  }
+
+  @media (min-width: 400px) and (max-width: 899px) {
+    padding-left: @margin-edge-small;
+    padding-right: @margin-edge-small;
+  }
+
+  @media (min-width: 865px) and (max-width: 899px) {
+    background-position: 90px 380px;
+  }
+
+  @media (max-width: 399px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: 865px) and (max-width: 1100px) {
+    background-size: 280px auto;
+  }
+
+  @media (min-width: 580px) and (max-width: 864px) {
+    background-size: 25% auto;
+    background-position: right 30px top 50px;
+  }
+
+  @media (min-width: 400px) and (max-width: 579px) {
+    background-size: 50px auto;
+    background-position: 25px 90px;
+  }
+
+  @media (max-width: 399px) {
+    background-size: 50px auto;
+    background-position: 18px 90px;
+  }
 }
 
 .features__title {
@@ -18,9 +68,68 @@
   font-weight: 400;
   line-height: 64px;
   letter-spacing: 0.6px;
+
+  @media (min-width: 720px) and (max-width: 1239px) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: 400px) and (max-width: 719px) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 399px) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: 1240px) and (max-width: 1439px) {
+    padding-right: 7.5%;
+  }
+
+  @media (max-width: 864px) {
+    padding-right: 30%;
+  }
+
+  @media (max-width: 579px) {
+    padding-left: 55px;
+    padding-right: 0;
+  }
+
+  @media (min-width: 865px) and (max-width: 1239px) {
+    font-size: 46px;
+    line-height: 54px;
+  }
+
+  @media (min-width: 720px) and (max-width: 864px) {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @media (min-width: 660px) and (max-width: 719px) {
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  @media (min-width: 580px) and (max-width: 659px) {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  @media (min-width: 400px) and (max-width: 579px) {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  @media (max-width: 399px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .features__list {
   margin-left: 50.8%;
   border-top: 2px solid @coral;
+
+  @media (max-width: 864px) {
+    margin-left: 0;
+  }
 }

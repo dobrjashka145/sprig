@@ -1,20 +1,75 @@
+.solutions {
+  margin-bottom: 128px;
+  margin-left: @margin-edge-big;
+  margin-right: @margin-edge-small;
+
+  @media (max-width: 1239px) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: 400px) and (max-width: 899px) {
+    margin-left: @margin-edge-small;
+  }
+
+  @media (max-width: 399px) {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .solutions__description {
   margin-bottom: 210px;
   padding-right: 48%;
+
+  @media (min-width: 550px) and (max-width: 1239px) {
+    margin-bottom: 90px;
+  }
+
+  @media (max-width: 549px) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 1239px) {
+    padding-right: 41%;
+  }
+
+  @media (min-width: 676px) and (max-width: 1239px) {
+    padding-right: 41%;
+  }
+
+  @media (min-width: 540px) and (max-width: 675px) {
+    padding-right: 170px;
+  }
+
+  @media (min-width: 400px) and (max-width: 539px) {
+    padding-right: 90px;
+  }
+
+  @media (max-width: 399px) {
+    padding-right: 40px;
+  }
 }
 
 .solutions__description-title {
   margin: 0;
   margin-bottom: 27px;
-  font-size: 42px;
-  font-weight: 400;
-  line-height: 48px;
-  letter-spacing: 0.42px;
 }
 
 .solutions__description-text {
   margin: 0;
   color: @dark-add;
+
+  @media (min-width: 900px) and (max-width: 1239px) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  @media (max-width: 899px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .solutions__list {
@@ -23,9 +78,11 @@
 
 .solutions__links-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .solutions__link {
+  margin-bottom: 20px;
   margin-right: 9px;
   padding: 4px 16px;
   font-size: 12px;

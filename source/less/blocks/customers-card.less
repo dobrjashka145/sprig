@@ -1,0 +1,81 @@
+.customers-card {
+  padding-top: 79px;
+  padding-left: 115px;
+  padding-right: 115px;
+  padding-bottom: 40px;
+  background-image: url("../img/quotes.svg");
+  background-size: image-size("../img/quotes.svg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-color: @yellow;
+
+  @media (min-width: 1240px) and (max-width: 1439px) {
+    padding-left: 11%;
+    padding-right: 11%;
+  }
+
+  @media (min-width: 400px) and (max-width: 1239px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (max-width: 599px) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: 399px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.customers-card__text {
+  margin: 0;
+  margin-bottom: 80px;
+
+  @media (min-width: 900px) and (max-width: 1239px) {
+    margin-bottom: 50px;
+  }
+}
+
+.customers-card__author {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.customers-card__author-image {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-right: 25px;
+  background-color: @white;
+  border-radius: 50%;
+
+  @media (min-width: 320px) and (max-width: 1239px) {
+    margin-bottom: 15px;
+  }
+}
+
+.customers-card__author-image img {
+  position: absolute;
+  width: 80px;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  object-fit: cover;
+}
+
+
+.customers-card__author-name {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.customers-card__author-office {
+  margin: 0;
+  font-size: 17px;
+  line-height: 20px;
+  color: @dark-2f;
+}
