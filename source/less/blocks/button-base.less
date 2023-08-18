@@ -9,14 +9,46 @@
   border: 1px solid @dark-base;
   border-radius: 4px;
 
+  &:hover {
+    background-color: @yellow;
+    border-color: @yellow;
+  }
+
+  &:active {
+    color: fade(@dark-base, 35%);
+    background-color: transparent;
+    border-color: @dark-base;
+  }
+
   &--fill {
     background-color: @yellow;
     border-color: @yellow;
+
+    &:hover {
+      background-color: transparent;
+      border-color: @dark-base;
+    }
+
+    &:active {
+      color: fade(@dark-base, 35%);
+      background-color: @yellow;
+      border-color: @yellow;
+    }
   }
 
   &--darkFill {
     color: @white;
     background-color: @dark-base;
+
+    &:hover {
+      background-color: @dark-base;
+      border-color: @dark-base;
+    }
+
+    &:active {
+      color: fade(@white, 50%);
+      background-color: @dark-base;
+    }
 
     @media (max-width: 1220px) {
       padding: 10px 15px;

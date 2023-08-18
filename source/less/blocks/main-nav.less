@@ -17,6 +17,14 @@
   padding: 7px;
 }
 
+.main-nav__toggle:hover {
+  transform: translateY(-50%) scale(1.7);
+}
+
+.main-nav__toggle:active {
+  transform: translateY(-50%) scale(1.7);
+}
+
 .main-nav__link {
   display: block;
   padding: 15px 30px;
@@ -32,6 +40,18 @@
   &--user {
     padding-left: 19px;
     padding-right: 19px;
+  }
+
+  &:hover {
+    color: @orange;
+  }
+
+  &:active {
+    color: fade(@dark-base, 35%);
+  }
+
+  &--multiple:active {
+    color: fade(@black, 35%);
   }
 
   @media (min-width: 865px) and (max-width: 1220px) {

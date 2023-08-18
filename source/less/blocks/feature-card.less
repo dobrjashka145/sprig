@@ -35,13 +35,30 @@
 
 .feature-card__learnMore {
   display: block;
+  width: max-content;
   font-size: 16px;
   line-height: 28px;
   color: @dark-base;
   text-decoration: none;
+
+  &:hover {
+    color: @coral;
+  }
+
+  &:active {
+    color: fade(@dark-base, 35%);
+  }
 }
 
 .feature-card__learnMore-icon {
   margin-left: 10px;
   stroke: @black;
+}
+
+.feature-card__learnMore:hover .feature-card__learnMore-icon {
+  stroke: @coral;
+}
+
+.feature-card__learnMore:active .feature-card__learnMore-icon {
+  stroke: fade(@black, 35%);
 }

@@ -42,6 +42,14 @@
   }
 }
 
+.page-footer__logo:hover .page-footer__logo-image {
+  fill: @orange;
+}
+
+.page-footer__logo:active .page-footer__logo-image {
+  fill: fade(@white, 35%);
+}
+
 .page-footer__logo-image {
   fill: @white;
 }
@@ -86,6 +94,14 @@
 
   &--first {
     color: @yellow;
+  }
+
+  &:hover {
+    color: @white;
+  }
+
+  &:active {
+    color: mix(@grey-94, @yellow, 60%);
   }
 }
 

@@ -94,8 +94,21 @@
   background-color: @grey-e7;
   border-radius: 4px;
 
+  &:hover {
+    color: mix(@dark-base, @orange, 30%);
+  }
+
+  &:active {
+    color: @dark-base;
+  }
+
   &--active {
     color: @dark-base;
     background-color: @orange;
+
+    &:hover {
+      background-color: transparent;
+      outline: 1px solid @orange;
+    }
   }
 }
