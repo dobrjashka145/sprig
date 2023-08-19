@@ -14,27 +14,30 @@
       <div class="page-container">
         <div class="content-container">
           <header class="page-header">
-            <a class="page-header__logo" href="#promo-top">
+            <a class="page-header__logo" href="#promo">
               <svg class="page-header__logo-image" viewBox="0 0 95 36" width="95" height="36" aria-label="Logo Sprig.">
                 <use xlink:href="img/sprite.svg#logo"></use>
               </svg>
               <div class="page-header__logo-text">formerly UserLeap</div>
             </a>
 
-            <nav class="page-header__nav main-nav">
-              <ul class="main-nav__list">
+            <nav class="page-header__main-nav main-nav page-header__main-nav--closed">
+              <ul class="main-nav__list main-nav__list--base">
+                <li class="main-nav__item visually-hidden">
+                  <a class="main-nav__link" href="#promo">Promo</a>
+                </li>
                 <li class="main-nav__item">
                   <a class="main-nav__link" href="#whySprig">Why Sprig?</a>
                 </li>
 
-                <li class="main-nav__item">
+                <li class="main-nav__item main-nav__item--multiple" tabindex="0">
                   <a class="main-nav__link main-nav__link--multiple" href="#product">Product</a>
                   <button class="main-nav__toggle button-toggle" type="button" aria-label="Open submenu.">
                     <svg class="button-toggle__icon" viewBox="0 0 24 24" width="8" height="5" aria-label="Open submenu.">
                     <use xlink:href="img/sprite.svg#arrow-down"></use>
                     </svg>
                   </button>
-                  <ul class="main-nav__sublist hidden">
+                  <ul class="main-nav__sublist">
                     <li class="main-nav__subitem">
                       <a class="main-nav__sublink main-nav__link" href="#microsurveys">Microsurveys</a>
                     </li>
@@ -56,14 +59,14 @@
                   </ul>
                 </li>
 
-                <li class="main-nav__item">
+                <li class="main-nav__item main-nav__item--multiple" tabindex="0">
                   <a class="main-nav__link main-nav__link--multiple" href="#customers">Customers</a>
                   <button class="main-nav__toggle button-toggle" type="button" aria-label="Open submenu.">
                     <svg class="button-toggle__icon" viewBox="0 0 24 24" width="8" height="5" aria-label="Open submenu.">
                       <use xlink:href="img/sprite.svg#arrow-down"></use>
                     </svg>
                   </button>
-                  <ul class="main-nav__sublist hidden">
+                  <ul class="main-nav__sublist">
                     <li class="main-nav__subitem">
                       <a class="main-nav__sublink main-nav__link" href="#square">Square</a>
                     </li>
@@ -71,31 +74,31 @@
                       <a class="main-nav__sublink main-nav__link" href="#codecademy">Codecademy</a>
                     </li>
                     <li class="main-nav__subitem">
-                      <a class="main-nav__sublink main-nav__link" href="#">Nova Credit</a>
+                      <a class="main-nav__sublink main-nav__link" href="#novaCredit">Nova Credit</a>
                     </li>
                     <li class="main-nav__subitem">
                       <a class="main-nav__sublink main-nav__link" href="#chipper">Chipper</a>
                     </li>
                     <li class="main-nav__subitem">
-                      <a class="main-nav__sublink main-nav__link" href="#">Plann</a>
+                      <a class="main-nav__sublink main-nav__link" href="#plann">Plann</a>
                     </li>
                     <li class="main-nav__subitem">
-                      <a class="main-nav__sublink main-nav__link" href="#">ProGuides</a>
+                      <a class="main-nav__sublink main-nav__link" href="#proGuides">ProGuides</a>
                     </li>
                     <li class="main-nav__subitem">
-                      <a class="main-nav__sublink main-nav__link" href="#">Shift</a>
+                      <a class="main-nav__sublink main-nav__link" href="#shift">Shift</a>
                     </li>
                   </ul>
                 </li>
 
-                <li class="main-nav__item">
+                <li class="main-nav__item main-nav__item--multiple" tabindex="0">
                   <a class="main-nav__link main-nav__link--multiple" href="#">Resources</a>
                   <button class="main-nav__toggle button-toggle" type="button" aria-label="Open submenu.">
                     <svg class="button-toggle__icon" viewBox="0 0 24 24" width="8" height="5" aria-label="Open submenu.">
                       <use xlink:href="img/sprite.svg#arrow-down"></use>
                     </svg>
                   </button>
-                  <ul class="main-nav__sublist hidden">
+                  <ul class="main-nav__sublist">
                     <li class="main-nav__subitem">
                       <a class="main-nav__sublink main-nav__link" href="#">Blog</a>
                     </li>
@@ -121,7 +124,7 @@
             </nav>
 
             <nav class="page-header__user-nav main-nav">
-              <ul class="main-nav__list">
+              <ul class="main-nav__list main-nav__list--user">
                 <li class="main-nav__item">
                   <a class="main-nav__link main-nav__link--user" href="#">Sign In</a>
                 </li>
@@ -227,15 +230,15 @@
               <p class="product__description-text">Get 30% higher response rates by asking your customers hyper-relevant questions based on who they are and what they'll do within your product.</p>
             </div>
 
-            <div class="product__solutions solutions">
+            <div class="product__solutions solutions" id="solutions">
               <div class="solutions__description">
                 <div class="solutions__description-rubric rubric">Solutions</div>
                 <h2 class="solutions__description-title title-base">How Sprig helps ensure every product decision is customer-informed</h2>
                 <p class="solutions__description-text">And helps through every stage of your product.</p>
               </div>
 
-              <ul class="solutions__list">
-                <li class="solutions__item solution-card" id="microsurveys">
+              <div class="solutions__content-container">
+                <div class="solutions__item solution-card solutions__item--active" id="microsurveys">
                   <div class="solution-card__image">
                     <img  src="img/content/solutions-microsurveys@1x.png" width="513" height="348" alt="Contextual Microsurveys.">
                   </div>
@@ -244,9 +247,9 @@
                     <p class="solution-card__description-text">Keep a constant pulse on your customer’s experience. Continuously surface user insights via in-product, email, or link microsurveys to improve your product and acquisition funnels.</p>
                     <a class="solution-card__description-link button-base" href="#">Learn More</a>
                   </div>
-                </li>
+                </div>
 
-                <li class="solutions__item solution-card" id="videoQuestions">
+                <div class="solutions__item solution-card" id="videoQuestions">
                   <div class="solution-card__image">
                     <img  src="img/content/solutions-video-questions@1x.png" width="513" height="329" alt="Video Questions.">
                   </div>
@@ -255,9 +258,9 @@
                     <p class="solution-card__description-text">Have more customer conversations, in less time. Conduct one-to-one user interviews anytime, anywhere in order to validate ideas and build a roadmap your customers will love.</p>
                     <a class="solution-card__description-link button-base" href="#">Learn More</a>
                   </div>
-                </li>
+                </div>
 
-                <li class="solutions__item solution-card" id="conceptTesting">
+                <div class="solutions__item solution-card" id="conceptTesting">
                   <div class="solution-card__image">
                     <img  src="img/content/solutions-concept-testing@1x.png" width="513" height="397" alt="Concept Testing.">
                   </div>
@@ -266,12 +269,13 @@
                     <p class="solution-card__description-text">Quickly iterate designs based on feedback from your users. Conduct rapid and remote concept testing to ensure your new concept, design, and messaging hit the mark by collecting feedback from your customers before launch.</p>
                     <a class="solution-card__description-link button-base" href="#">Learn More</a>
                   </div>
-                </li>
-              </ul>
-              <div class="solutions__links-container">
-                <a class="solutions__link" href="#microsurveys">Contextual Microsurveys</a>
-                <a class="solutions__link" href="#videoQuestions">Video Questions</a>
-                <a class="solutions__link solutions__link--active" href="#conceptTesting">Concept Testing</a>
+                </div>
+
+                <div class="solutions__links-container">
+                  <button class="solutions__link solutions__link--active" type="button" data-item="microsurveys">Contextual Microsurveys</button>
+                  <button class="solutions__link" type="button" data-item="videoQuestions">Video Questions</button>
+                  <button class="solutions__link" type="button" data-item="conceptTesting">Concept Testing</button>
+                </div>
               </div>
             </div>
 
@@ -284,7 +288,7 @@
                   <div class="feature-card__title-container">
                     <h3 class="feature-card__title">Contextual Targeting</h3>
                     <button class="feature-card__toggle button-toggle" type="button" aria-label="Open description.">
-                      <svg class=" button-toggle__icon button-toggle__icon--opened" viewBox="0 0 24 24" width="24" height="24" aria-label="Open description.">
+                      <svg class="button-toggle__icon" viewBox="0 0 24 24" width="24" height="24" aria-label="Open description.">
                         <use xlink:href="img/sprite.svg#arrow-down"></use>
                       </svg>
                     </button>
@@ -309,10 +313,14 @@
                       </svg>
                     </button>
                   </div>
-                  <div class="feature-card__description-container hidden">
+                  <div class="feature-card__description-container">
                     <p class="feature-card__description">AI Analysis</p>
                     <p class="feature-card__description">AI Analysis</p>
-                    <a class="feature-card__learnMore" href="#">Learn More</a>
+                    <a class="feature-card__learnMore" href="#">Learn More
+                      <svg class="feature-card__learnMore-icon" viewBox="0 0 27 12" width="27" height="12" aria-label="Learn More.">
+                        <use xlink:href="img/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </a>
                   </div>
                 </div>
 
@@ -325,10 +333,14 @@
                       </svg>
                     </button>
                   </div>
-                  <div class="feature-card__description-container hidden">
+                  <div class="feature-card__description-container">
                     <p class="feature-card__description">Templates</p>
                     <p class="feature-card__description">Templates</p>
-                    <a class="feature-card__learnMore" href="#">Learn More</a>
+                    <a class="feature-card__learnMore" href="#">Learn More
+                      <svg class="feature-card__learnMore-icon" viewBox="0 0 27 12" width="27" height="12" aria-label="Learn More.">
+                        <use xlink:href="img/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -352,19 +364,6 @@
               <a class="customers__readMore button-base" href="#">Read More</a>
             </div>
 
-            <div class="customers__stories customers-card customers__stories--active" id="codecademy">
-              <p class="customers-card__text title-add">Sprig helps us collect insights easier, faster, and more accurately than any other tool on the market, which allows us to build a better product for our users and ultimately grow our revenue.</p>
-              <div class="customers-card__author">
-                <div class="customers-card__author-image">
-                  <img  src="img/content/codecademy-daniel-layfield@1x.png" width="80" height="80" alt="Daniel Layfield.">
-                </div>
-                <div class="customers-card__author-caption">
-                  <p class="customers-card__author-name">Daniel Layfield</p>
-                  <p class="customers-card__author-office">Growth Product Manager at Codecademy</p>
-                </div>
-              </div>
-            </div>
-
             <div class="customers__stories customers-card" id="square">
               <p class="customers-card__text">Square's story.</p>
               <div class="customers-card__author">
@@ -378,6 +377,33 @@
               </div>
             </div>
 
+            <div class="customers__stories customers-card customers__stories--active" id="codecademy">
+              <p class="customers-card__text title-add">Sprig helps us collect insights easier, faster, and more accurately than any other tool on the market, which allows us to build a better product for our users and ultimately grow our revenue.</p>
+              <div class="customers-card__author">
+                <div class="customers-card__author-image">
+                  <img  src="img/content/codecademy-daniel-layfield@1x.png" width="80" height="80" alt="Daniel Layfield.">
+                </div>
+                <div class="customers-card__author-caption">
+                  <p class="customers-card__author-name">Daniel Layfield</p>
+                  <p class="customers-card__author-office">Growth Product Manager at Codecademy</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="customers__stories customers-card" id="novaCredit">
+              <p class="customers-card__text">Nova Credit's story.</p>
+              <div class="customers-card__author">
+                <div class="customers-card__author-image">
+                  <img  src="#" width="80" height="80" alt="Logo Nova Credit.">
+                </div>
+                <div class="customers-card__author-caption">
+                  <p class="customers-card__author-name">John Smith</p>
+                  <p class="customers-card__author-office">Product Manager at Nova Credit</p>
+                </div>
+              </div>
+            </div>
+
+
             <div class="customers__stories customers-card" id="chipper">
               <p class="customers-card__text">Chipper's story.</p>
               <div class="customers-card__author">
@@ -390,19 +416,58 @@
                 </div>
               </div>
             </div>
+
+            <div class="customers__stories customers-card" id="plann">
+              <p class="customers-card__text">Plann's story.</p>
+              <div class="customers-card__author">
+                <div class="customers-card__author-image">
+                  <img  src="#" width="80" height="80" alt="Logo Plann.">
+                </div>
+                <div class="customers-card__author-caption">
+                  <p class="customers-card__author-name">John Smith</p>
+                  <p class="customers-card__author-office">Product Manager at Plann</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="customers__stories customers-card" id="proGuides">
+              <p class="customers-card__text">proGuides' story.</p>
+              <div class="customers-card__author">
+                <div class="customers-card__author-image">
+                  <img  src="img/content/proguides-logo@1x.png" width="80" height="80" alt="Logo proGuides.">
+                </div>
+                <div class="customers-card__author-caption">
+                  <p class="customers-card__author-name">John Smith</p>
+                  <p class="customers-card__author-office">Product Manager at proGuides</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="customers__stories customers-card" id="shift">
+              <p class="customers-card__text">Shift's story.</p>
+              <div class="customers-card__author">
+                <div class="customers-card__author-image">
+                  <img  src="img/content/shift-logo@1x.png" width="80" height="80" alt="Logo Shift.">
+                </div>
+                <div class="customers-card__author-caption">
+                  <p class="customers-card__author-name">John Smith</p>
+                  <p class="customers-card__author-office">Product Manager at Shift</p>
+                </div>
+              </div>
+            </div>
           </section>
 
-          <section class="promo-bottom">
+          <div class="promo-bottom">
             <div class="promo-bottom__content-container">
               <h2 class="promo-bottom__title title-base">Launch a Sprig within minutes.<br> See insights within hours.</h2>
               <p class="promo-bottom__description">Create your free account to conduct video interviews, test designs, and survey specific users within your product, on your website, and more.</p>
               <a class="promo-bottom__startFree button-base button-base--fill" href="#">Start for Free</a>
             </div>
-          </section>
+          </div>
         </div>
 
         <footer class="page-footer">
-          <a class="page-footer__logo" href="#">
+          <a class="page-footer__logo" href="#promo">
             <svg class="page-footer__logo-image" viewBox="0 0 95 36" width="127" height="48" aria-label="Logo Sprig.">
               <use xlink:href="img/sprite.svg#logo"></use>
             </svg>
@@ -533,7 +598,10 @@
       </div>
     </main>
 
-    <!-- <script src="js/menu-admin.min.js"></script>
-    <script src="js/questions-admin.min.js"></script> -->
+    <script src="js/menu-admin.js"></script>
+    <script src="js/features-admin.js"></script>
+    <script src="js/solutions-slider.js"></script>
+    <script src="js/customers-slider.js"></script>
+
   </body>
 </html>

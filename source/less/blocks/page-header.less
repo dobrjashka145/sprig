@@ -1,4 +1,5 @@
 .page-header {
+  position: relative;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -7,12 +8,17 @@
   background-color: @white;
   box-sizing: border-box;
 
-  @media (min-width: 510px) and (max-width: 1210px) {
+  @media (min-width: 865px) and (max-width: 1210px) {
     margin-bottom: 10px;
   }
 
-  @media (max-width: 509px) {
-    margin-bottom: 15px;
+  @media (min-width: 600px) and (max-width: 864px) {
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: 599px) {
+    margin-bottom: 10px;
+    border-bottom: 1px solid @grey-e7;
   }
 
   @media (max-width: 864px) {
@@ -21,10 +27,18 @@
   }
 }
 
+.page-header--fixed {
+  position: fixed;
+  width: 100%;
+  max-width: @desktop-width-max;
+  background-color: @white;
+  z-index: 2;
+}
+
 .page-header__logo {
   display: block;
   align-self: center;
-  margin-right: 30px;
+  margin-right: 25px;
   padding-bottom: 0;
   text-decoration: none;
 
@@ -64,16 +78,50 @@
   color: fade(@black, 35%);
 }
 
-.page-header__nav {
+.page-header__main-nav {
   margin-left: auto;
   margin-right: 30px;
 
   @media (min-width: 865px) and (max-width: 1240px) {
     margin-right: 0;
   }
+}
 
+.page-header__main-nav--closed {
   @media (max-width: 864px) {
     display: none;
+  }
+}
+
+.page-header__main-nav--opened {
+  @media (max-width: 864px) {
+    position: absolute;
+    display: block;
+    background-color: @white;
+    z-index: 2;
+  }
+
+  @media (min-width: 600px) and (max-width: 864px) {
+    right: 0;
+    bottom: 0;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 599px) {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    padding: 20px 30px;
+    background-color: mix(@white, @grey-e7, 85%);
+    outline: 1px solid @grey-e7;
+  }
+
+  @media (min-width: 509px) and (max-width: 599px) {
+    top: 83px;
+  }
+
+  @media (max-width: 508px) {
+    top: 138px;
   }
 }
 
@@ -97,6 +145,7 @@
   justify-self: end;
   align-self: center;
   margin-left: 20px;
+  margin-right: 10px;
   background-color: transparent;
   border: none;
   border-top: 2px solid @dark-base;
