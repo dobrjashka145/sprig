@@ -93,6 +93,16 @@
   }
 }
 
+.page-header__main-nav--nojs {
+  position: static;
+  display: flex;
+
+  @media (max-width: 864px) {
+    margin-left: 30px;
+    order: 2;
+  }
+}
+
 .page-header__main-nav--opened {
   @media (max-width: 864px) {
     position: absolute;
@@ -202,6 +212,6 @@
   }
 }
 
-// .page-header__nav-toggle--nojs {
-//   display: none;
-// }
+.page-header__toggle-gamburger--nojs {
+  display: none;
+}

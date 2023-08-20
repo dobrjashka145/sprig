@@ -9,11 +9,10 @@ const navLinks = navSite.querySelectorAll('.main-nav__item');
 const subNavs = navSite.querySelectorAll('.main-nav__sublist');
 const subNavLinks = navSite.querySelectorAll('.main-nav__subitem');
 
-// // Убираем классы '--nojs'
-// navSite.classList.remove('main-nav--nojs');
-// contactsHeader.classList.remove('page-header__contacts--nojs');
-// navToggle.classList.remove('page-header__nav-toggle--nojs');
-// navbar.classList.remove('page-header--nojs');
+// Убираем классы '--nojs'
+navSite.classList.remove('page-header__main-nav--nojs');
+navToggle.classList.remove('page-header__toggle-gamburger--nojs');
+subNavs.classList.remove('main-nav__sublist--nojs');
 
 // Открываем/закрываем мобильное меню по клику на переключатель-"гамбургер"
 navToggle.addEventListener('click', function () {
@@ -36,11 +35,9 @@ for (let link of navLinks) {
       subActiveNone();
       currentLink.classList.add('main-nav__item--first');
       currentLink.querySelector('.main-nav__sublist').classList.add('main-nav__sublist--opened')
-          for (let subLink of subNavLinks) {
-            subLink.addEventListener('click', navClose);
-          }
-      //   });
-      // }
+      for (let subLink of subNavLinks) {
+        subLink.addEventListener('click', navClose);
+      }
     }
   });
 }

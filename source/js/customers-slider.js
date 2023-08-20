@@ -2,6 +2,14 @@
 const mainNavLinks = document.querySelectorAll('.main-nav__subitem');
 const footerNavLinks = document.querySelectorAll('.page-footer__nav-item');
 const stories = document.querySelectorAll('.customers__stories');
+const section = document.querySelector('.customers');
+
+// Убираем классы '--nojs'
+section.classList.remove('customers--nojs');
+for (story of stories) {
+  story.classList.remove('customers__stories--nojs');
+}
+
 
 checkSlide(mainNavLinks, stories);
 checkSlide(footerNavLinks, stories);

@@ -1,15 +1,18 @@
 (function () {
+const descriptions = document.querySelectorAll('.feature-card__description-container');
+
+const toggleContainers = document.querySelectorAll('.feature-card__toggle');
 const toggles = document.querySelectorAll('.feature-card__toggle .button-toggle__icon');
 const cards = document.querySelectorAll('.feature-card__description-container');
 
 
-// for (let card of cards) {
-//   card.classList.remove('questions__answer--nojs');
-// }
+for (spec of descriptions) {
+  spec.classList.remove('feature-card__description-container--nojs');
+}
 
-// for (let toggle of toggles) {
-//   toggle.classList.remove('questions__toggle--nojs');
-// }
+for (let toggle of toggleContainers) {
+  toggle.classList.remove('feature-card__toggle--js');
+}
 
 for (let i = 0; i < toggles.length; i++) {
   toggleCard(toggles[i], cards[i]);

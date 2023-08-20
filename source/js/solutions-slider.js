@@ -1,29 +1,21 @@
 (function () {
+const cardsContainer = document.querySelector('.solutions__content-container')
+
 const solutionCards = document.querySelectorAll('.solutions__item');
 const solutionLinks = document.querySelectorAll('.solutions__link');
 
 const subNavLinks = document.querySelectorAll('.main-nav__subitem');
 const footerNavLinks = document.querySelectorAll('.page-footer__nav-item');
 
-// Переключение слайдов по клику на контролы
-for (let buttonLink of solutionLinks) {
-  buttonLink.addEventListener('click', function() {
-    noneActive();
-    let dataItem = buttonLink.dataset.item;
-    for (let card of solutionCards) {
-      if(card.getAttribute("id") === dataItem) {
-        card.classList.add('solutions__item--active');
-        buttonLink.classList.add('solutions__link--active');
-      }
-    }
-  });
-}
+// Убираем классы '--nojs'
+cardsContainer.classList.remove('solutions__content-container--nojs');
 
-// Переключение слайдов по клику на пункты меню/подменю
+// Переключение слайдов по клику на пункты меню/подменю и контролы
+checkSlide(solutionLinks, solutionCards, solutionLinks);
 checkSlide(subNavLinks, solutionCards, solutionLinks);
 checkSlide(footerNavLinks, solutionCards, solutionLinks);
 
-// Функция перекоючения слайдов по клику на пункты меню
+// Функция переключения слайдов по клику на пункты меню и контролы
 function checkSlide (links, slides, controls) {
   for (let link of links) {
     link.addEventListener('click', function(evt) {
@@ -34,7 +26,7 @@ function checkSlide (links, slides, controls) {
         if(slide.getAttribute("id") === dataHref) {
           slide.classList.add('solutions__item--active');
           for (let control of controls) {
-            if(control.dataset.item === dataHref) {
+            if(control.getAttribute("href").slice(1) === dataHref) {
               control.classList.add('solutions__link--active');
             }
           }
