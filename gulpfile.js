@@ -39,7 +39,7 @@ const minHTML = () => {
 
 const copyFiles = () => {
   return gulp.src([
-  'source/fonts/*.{woff2, woff}',
+  'source/fonts/*.*',
   'source/*.ico'
   ], {base: 'source'})
     .pipe(gulp.dest('build'));
