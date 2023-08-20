@@ -10,8 +10,22 @@ const footerNavLinks = document.querySelectorAll('.page-footer__nav-item');
 // Убираем классы '--nojs'
 cardsContainer.classList.remove('solutions__content-container--nojs');
 
+// Переключение слайдов по клику на контролы
+for (let buttonLink of solutionLinks) {
+  cardsContainer.classList.remove('solutions__content-container--nojs');
+    buttonLink.addEventListener('click', function() {
+      noneActive();
+      let dataItem = buttonLink.dataset.item;
+      for (let card of solutionCards) {
+        if(card.getAttribute("id") === dataItem) {
+          card.classList.add('solutions__item--active');
+          buttonLink.classList.add('solutions__link--active');
+        }
+      }
+    });
+  }
+
 // Переключение слайдов по клику на пункты меню/подменю и контролы
-checkSlide(solutionLinks, solutionCards, solutionLinks);
 checkSlide(subNavLinks, solutionCards, solutionLinks);
 checkSlide(footerNavLinks, solutionCards, solutionLinks);
 
@@ -26,7 +40,7 @@ function checkSlide (links, slides, controls) {
         if(slide.getAttribute("id") === dataHref) {
           slide.classList.add('solutions__item--active');
           for (let control of controls) {
-            if(control.getAttribute("href").slice(1) === dataHref) {
+            if(control.dataset.item === dataHref) {
               control.classList.add('solutions__link--active');
             }
           }
