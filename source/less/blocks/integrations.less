@@ -3,10 +3,14 @@
   margin-left: @margin-edge-big;
   padding-top: 36px;
   padding-bottom: 50px;
-  background-image: url("../img/integrations-bg@1x.png");
-  background-size: image-size("../img/integrations-bg@1x.png");
+  background-image: url("../img/integrations-bg-desktop@1x.png");
+  background-size: image-size("../img/integrations-bg-desktop@1x.png");
   background-position: right calc(50% + 17px);
   background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/integrations-bg-desktop@2x.png");
+  }
 
   @media (max-width: 1239px) {
     margin-bottom: 40px;
@@ -30,6 +34,14 @@
 
   @media (min-width: 540px) and (max-width: 675px) {
     background-position: right -150px center;
+  }
+
+  @media (max-width: 600px) {
+    background-image: url("../img/integrations-bg-mobile@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/integrations-bg-mobile@2x.png");
+    }
   }
 
   @media (max-width: 539px) {

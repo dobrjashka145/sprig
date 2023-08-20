@@ -12,7 +12,9 @@ const subNavLinks = navSite.querySelectorAll('.main-nav__subitem');
 // Убираем классы '--nojs'
 navSite.classList.remove('page-header__main-nav--nojs');
 navToggle.classList.remove('page-header__toggle-gamburger--nojs');
-subNavs.classList.remove('main-nav__sublist--nojs');
+for (subList of subNavs) {
+  subList.classList.remove('main-nav__sublist--nojs');
+}
 
 // Открываем/закрываем мобильное меню по клику на переключатель-"гамбургер"
 navToggle.addEventListener('click', function () {
